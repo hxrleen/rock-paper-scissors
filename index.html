@@ -29,31 +29,17 @@
                     }
                     alert("Computer chose " + Computer);
 
-                    if (choice == Computer) {
-                        alert("Tie. Ready for another game?");
-                    }
-
-                    if (choice == 'Rock' && Computer == 'Paper') {
-                        alert('You won!! Congratulations.');
-                    }
-
-                    if (choice == 'Rock' && Computer == 'Scissors') {
-                        alert('You Lose. Better luck next time :( ');
-                    }
-
-                    if (choice == 'Paper' && Computer == 'Rock') {
-                        alert('You won!! Congratulations.');
-                    }
-
-                    if (choice == 'Paper' && Computer == 'Scissors') {
-                        alert('You Lose. Better luck next time :( ');
-                    }
-
-                    if (choice == 'Scissors' && Computer == 'Rock') {
-                        alert('You Lose. Better luck next time :( ');
-                    }
-                    if (choice == 'Scissors' && Computer == 'Paper') {
-                        alert('You won!! Congratulations.');
+                    if (choice === Computer) {
+                        alert("It's a tie! Ready for another game?");
+                        location.reload;
+                    } else if (
+                        (choice === 'Rock' && Computer === 'Scissors') ||
+                        (choice === 'Paper' && Computer === 'Rock') ||
+                        (choice === 'Scissors' && Computer === 'Paper')
+                    ) {
+                        alert("You won!! Congratulations.");
+                    } else {
+                        alert("You lose. Better luck next time :(");
                     }
 
 
