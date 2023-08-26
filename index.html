@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                var choice = prompt("Enter a choice");
+
+                if (choice == "Rock" || choice == "Paper" || choice == "Scissors") {
+                    alert("Your choice is " + choice);
+
+                    var computerChoice = Math.floor(Math.random() * 3);
+                    var Computer;
+                    switch (computerChoice) {
+                        case 0:
+                            Computer = 'Rock';
+                            break;
+                        case 1:
+                            Computer = 'Paper';
+                            break;
+                        case 2:
+                            Computer = 'Scissors';
+                            break;
+                    }
+                    alert("Computer chose " + Computer);
+
+                    if (choice == Computer) {
+                        alert("Tie. Ready for another game?");
+                    }
+
+                    if (choice == 'Rock' && Computer == 'Paper') {
+                        alert('You won!! Congratulations.');
+                    }
+
+                    if (choice == 'Rock' && Computer == 'Scissors') {
+                        alert('You Lose. Better luck next time :( ');
+                    }
+
+                    if (choice == 'Paper' && Computer == 'Rock') {
+                        alert('You won!! Congratulations.');
+                    }
+
+                    if (choice == 'Paper' && Computer == 'Scissors') {
+                        alert('You Lose. Better luck next time :( ');
+                    }
+
+                    if (choice == 'Scissors' && Computer == 'Rock') {
+                        alert('You Lose. Better luck next time :( ');
+                    }
+                    if (choice == 'Scissors' && Computer == 'Paper') {
+                        alert('You won!! Congratulations.');
+                    }
+
+
+                } else {
+                    alert("Invalid event. Try again");
+                    location.reload();
+                }
+            });
+        </script>
+
+    </body>
+
+</html>
